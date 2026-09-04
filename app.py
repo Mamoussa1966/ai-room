@@ -1,3 +1,14 @@
+import subprocess
+import sys
+# تثبيت المكتبة تلقائياً إذا لم تكن موجودة على السيرفر
+try:
+    import google.generativeai as genai
+except ImportError:
+    subprocess.check_call(
+        [sys.executable, "-m", "pip", "install", "google-generativeai"]
+    )
+    import google.generativeai as genai
+
 import streamlit as st
 import google.generativeai as genai
 from openai import OpenAI
