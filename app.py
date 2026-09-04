@@ -1,5 +1,3 @@
-import subprocess
-import sys
 # تثبيت المكتبة تلقائياً إذا لم تكن موجودة على السيرفر
 try:
     import google.generativeai as genai
